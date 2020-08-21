@@ -17,6 +17,7 @@ router.get('/', async (req, res, next) => {
 
         params.q = city === undefined ? "naivasha,kenya" : city
         const { data } = await axios.get(`${BASE_URL}q=${params.q}&units=${params.units}&APPID=${params.api_key}`)
+        // console.log(data)
         console.log(data)
 
         // respond with data from openweather api
